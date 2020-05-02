@@ -1,1 +1,1 @@
-# CSTrials
+# CSExercises
