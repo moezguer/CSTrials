@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-/*    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         int numberOfTest;
         int arraySize;
 
@@ -27,7 +27,7 @@ public class Main {
             }
             System.out.println(Kadane.getKadane(array2));
         }
-    }*/
+    }
 
 
 }

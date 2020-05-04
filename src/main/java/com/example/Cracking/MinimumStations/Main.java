@@ -6,33 +6,25 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        int numberOfTest;
-        int arraySize1;
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int testCaseCount = Integer.parseInt(reader.readLine());
+
+        for (int t = 0; t < testCaseCount; t++) {
+            int countOfTrain = Integer.parseInt(reader.readLine());
+            String[] firstArray = reader.readLine().replace("  ", " ").split(" ");
+            String[] secondArray = reader.readLine().replace("  ", " ").split(" ");
 
 
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        numberOfTest = Integer.parseInt(bufferedReader.readLine());
 
-        for (int i = 0; i < numberOfTest; i++) {
+            int[] arrivals = new int[countOfTrain];
+            int[] departures = new int[countOfTrain];
 
-            arraySize1 = Integer.parseInt(bufferedReader.readLine());
-
-            String[] array = bufferedReader.readLine()
-                                           .trim()
-                                           .split(" ");
-            String[] array2 = bufferedReader.readLine()
-                                            .trim()
-                                            .split(" ");
-
-            int[] integerArray = new int[arraySize1];
-            int[] integerArray2 = new int[arraySize1];
-
-            for (int j = 0; j < arraySize1; j++) {
-                integerArray[j] = Integer.parseInt(array[j]);
-                integerArray2[j] = Integer.parseInt(array2[j]);
+            for (int i = 0; i < countOfTrain; i++) {
+                arrivals[i] = Integer.parseInt(firstArray[i]);
+                departures[i] = Integer.parseInt(secondArray[i]);
             }
-
-            System.out.println(MinimumStations.getMinStations(integerArray, integerArray2));
+            System.out.println(MinimumStations.getMinStations(arrivals, departures));
         }
     }
 }

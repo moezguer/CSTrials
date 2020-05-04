@@ -29,4 +29,8 @@ public class LRU {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
     }
+
+    public class Node {
+
+    }
 }

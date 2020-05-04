@@ -2,6 +2,10 @@ package com.example.Cracking.LRU;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
 public class Main {
 
     @Test public void test() {
@@ -18,6 +22,11 @@ public class Main {
         System.out.println();
 
         lru.printLRUList();
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
     }
 
 
